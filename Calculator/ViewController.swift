@@ -12,8 +12,6 @@ class ViewController: UIViewController {
     var temp = String()
     var valueOne = String()
     var operation = String()
-    var valueTwo = Double()
-    var valueTotal = Double()
     
     @IBOutlet var valueOutputted: UILabel!
     
@@ -37,8 +35,6 @@ class ViewController: UIViewController {
         temp += sender.title(for: .normal)!
         updateOutput()
     }
-    
-
     
  
     @IBAction func decimalPressed(_ sender: UIButton) {
@@ -113,6 +109,13 @@ class ViewController: UIViewController {
     }
  */
  
+    @IBAction func clearPressed(_ sender: UIButton) {
+        operation = String()
+        valueOne = String()
+        temp = String()
+        updateOutput()
+        changeButtons(enabled: true)
+    }
     
     @IBAction func changeSign(_ sender: Any) {
         if temp.contains("-") {

@@ -51,6 +51,9 @@
                                                                 <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <state key="normal" title="Clear"/>
+                                                                <connections>
+                                                                    <action selector="clearPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="h1A-0A-7aC"/>
+                                                                </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SvK-zq-e58">
                                                                 <rect key="frame" x="104" y="0.0" width="102.5" height="107.5"/>
