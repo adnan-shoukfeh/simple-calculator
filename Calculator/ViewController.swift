@@ -10,11 +10,14 @@ import UIKit
 
 class ViewController: UIViewController {
     var temp = String()
-    var valueOne = Double()
+    var valueOne = String()
+    var operation = String()
     var valueTwo = Double()
     var valueTotal = Double()
     
     @IBOutlet var valueOutputted: UILabel!
+    
+    @IBOutlet var disabledButtons: [UIButton]!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,7 +25,11 @@ class ViewController: UIViewController {
         
     }
     func updateOutput() {
-        valueOutputted.text = temp
+        if temp == "" {
+            valueOutputted.text = "0"
+        } else {
+            valueOutputted.text = temp
+        }
     }
     
     
@@ -30,7 +37,9 @@ class ViewController: UIViewController {
         temp += sender.title(for: .normal)!
         updateOutput()
     }
- 
+    
+
+    
  
     @IBAction func decimalPressed(_ sender: UIButton) {
         if !temp.contains(".") {
@@ -120,5 +129,57 @@ class ViewController: UIViewController {
         temp = "\(tempNum ?? 0)"
         updateOutput()
     }
+    
+    
+    @IBAction func operationPressed(_ sender: UIButton) {
+        valueOne = temp
+        temp = ""
+        operation = sender.title(for: .normal)!
+        updateOutput()
+        changeButtons(enabled: true)
+    }
+    
+    
+    @IBAction func equalPressed(_ sender: UIButton) {
+        
+        let totalNum: Double
+        if !valueOne.isEmpty {
+            switch operation {
+            case "+":
+                totalNum = Double(valueOne)! + Double(temp)!
+            case "-":
+                totalNum = Double(valueOne)! - Double(temp)!
+            case "x":
+                totalNum = Double(valueOne)! * Double(temp)!
+            case "/":
+                totalNum = Double(valueOne)! / Double(temp)!
+            default:
+                totalNum = Double(temp)!
+            }//switch
+        }//if
+        else {
+            totalNum = Double(temp)!
+        }//else
+        temp = String(totalNum)
+        updateOutput()
+        changeButtons(enabled: false)
+    }//func
+    
+    
+    func changeButtons(enabled: Bool) {
+        for button in disabledButtons {
+            button.isEnabled = enabled
+        }
+    }
+    
+    /*
+    @IBAction func additionPressed(_ sender: UIButton) {
+        valueOne = temp
+        temp = ""
+        operation = "+"
+    }
+    */
+    
+    
 }
 

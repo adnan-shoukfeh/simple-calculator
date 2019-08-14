@@ -75,6 +75,9 @@
                                                                 <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <state key="normal" title="/"/>
+                                                                <connections>
+                                                                    <action selector="operationPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="O9n-WZ-GmJ"/>
+                                                                </connections>
                                                             </button>
                                                         </subviews>
                                                     </stackView>
@@ -113,6 +116,9 @@
                                                                 <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <state key="normal" title="x"/>
+                                                                <connections>
+                                                                    <action selector="operationPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NW1-ZS-QfM"/>
+                                                                </connections>
                                                             </button>
                                                         </subviews>
                                                     </stackView>
@@ -151,6 +157,9 @@
                                                                 <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <state key="normal" title="-"/>
+                                                                <connections>
+                                                                    <action selector="operationPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VhV-PV-9Mi"/>
+                                                                </connections>
                                                             </button>
                                                         </subviews>
                                                     </stackView>
@@ -189,6 +198,9 @@
                                                                 <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <state key="normal" title="+"/>
+                                                                <connections>
+                                                                    <action selector="operationPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="V9c-f2-3J4"/>
+                                                                </connections>
                                                             </button>
                                                         </subviews>
                                                     </stackView>
@@ -218,6 +230,9 @@
                                                                 <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <state key="normal" title="="/>
+                                                                <connections>
+                                                                    <action selector="equalPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="coL-KU-lGH"/>
+                                                                </connections>
                                                             </button>
                                                         </subviews>
                                                         <constraints>
@@ -253,6 +268,18 @@
                     </view>
                     <connections>
                         <outlet property="valueOutputted" destination="BAI-sX-FIE" id="lKP-ox-KfU"/>
+                        <outletCollection property="disabledButtons" destination="Mzl-sI-25r" collectionClass="NSMutableArray" id="zpx-CY-zkM"/>
+                        <outletCollection property="disabledButtons" destination="5u6-r8-RTb" collectionClass="NSMutableArray" id="dOo-TB-ga5"/>
+                        <outletCollection property="disabledButtons" destination="MYT-pK-nPO" collectionClass="NSMutableArray" id="Qwx-aW-1fC"/>
+                        <outletCollection property="disabledButtons" destination="ukq-Am-HH5" collectionClass="NSMutableArray" id="BOp-XN-Gy3"/>
+                        <outletCollection property="disabledButtons" destination="jKr-J0-V60" collectionClass="NSMutableArray" id="G7K-K8-H9S"/>
+                        <outletCollection property="disabledButtons" destination="fNg-NZ-3yc" collectionClass="NSMutableArray" id="DAn-HZ-gOh"/>
+                        <outletCollection property="disabledButtons" destination="tDe-j3-y2r" collectionClass="NSMutableArray" id="GBU-yh-Jls"/>
+                        <outletCollection property="disabledButtons" destination="z7O-vW-RIJ" collectionClass="NSMutableArray" id="wzN-xg-Erz"/>
+                        <outletCollection property="disabledButtons" destination="BjU-Mq-QV6" collectionClass="NSMutableArray" id="ydY-B3-PxI"/>
+                        <outletCollection property="disabledButtons" destination="I74-wK-OnA" collectionClass="NSMutableArray" id="GvM-HB-e2t"/>
+                        <outletCollection property="disabledButtons" destination="uTA-qZ-SHs" collectionClass="NSMutableArray" id="yYw-e1-g2j"/>
+                        <outletCollection property="disabledButtons" destination="ITt-em-TDT" collectionClass="NSMutableArray" id="bJN-n1-oOa"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
