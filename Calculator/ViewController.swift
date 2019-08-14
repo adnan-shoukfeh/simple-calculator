@@ -25,10 +25,34 @@ class ViewController: UIViewController {
         valueOutputted.text = temp
     }
     
-    @IBAction func decimalPressed(_ sender: UIButton) {
-        temp += "."
+    
+    @IBAction func numberPressed(_ sender: UIButton) {
+        temp += sender.title(for: .normal)!
         updateOutput()
     }
+ 
+ 
+    @IBAction func decimalPressed(_ sender: UIButton) {
+        if !temp.contains(".") {
+            temp += "."
+            updateOutput()
+        }
+    }
+    
+   /*
+    @IBAction func justforshits(_ sender: UIButton) {
+        if true {
+            temp = "HEHE"
+        }
+        
+        if !true {
+            temp = "YeehAAW"
+        }
+        updateOutput()
+    }
+ */
+    
+    /*
     @IBAction func zeroPressed(_ sender: UIButton) {
         temp += "0"
         updateOutput()
@@ -78,6 +102,8 @@ class ViewController: UIViewController {
         temp += "9"
         updateOutput()
     }
+ */
+ 
     
     @IBAction func changeSign(_ sender: Any) {
         if temp.contains("-") {
