@@ -17,14 +17,21 @@ class ViewController: UIViewController {
     
     @IBOutlet var disabledButtons: [UIButton]!
     
+    @IBOutlet var moomoo: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
     }
     func updateOutput() {
+        moomoo.image = nil
         if temp == "" {
             valueOutputted.text = "0"
+        } else if temp == "696969" {
+            valueOutputted.text = temp
+            moomoo.image = UIImage(named: "IMG_5580")
+
         } else {
             valueOutputted.text = temp
         }

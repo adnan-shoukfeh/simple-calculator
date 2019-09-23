@@ -24,6 +24,9 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PjJ-kZ-kWr">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="278"/>
                                         <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="yj6-Ev-hp8">
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="278"/>
+                                            </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BAI-sX-FIE">
                                                 <rect key="frame" x="387" y="234" width="19" height="36"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
@@ -34,7 +37,11 @@
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="bottom" secondItem="BAI-sX-FIE" secondAttribute="bottom" constant="8" id="8X2-T5-wNy"/>
+                                            <constraint firstAttribute="trailing" secondItem="yj6-Ev-hp8" secondAttribute="trailing" id="AB3-i9-FBd"/>
+                                            <constraint firstItem="yj6-Ev-hp8" firstAttribute="top" secondItem="PjJ-kZ-kWr" secondAttribute="top" id="LEO-rI-raI"/>
                                             <constraint firstAttribute="trailing" secondItem="BAI-sX-FIE" secondAttribute="trailing" constant="8" id="QtY-2N-Nh7"/>
+                                            <constraint firstItem="yj6-Ev-hp8" firstAttribute="leading" secondItem="PjJ-kZ-kWr" secondAttribute="leading" id="bbC-3k-Ud8"/>
+                                            <constraint firstAttribute="bottom" secondItem="yj6-Ev-hp8" secondAttribute="bottom" id="xbP-e4-5EN"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gZU-im-otw">
@@ -270,6 +277,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="moomoo" destination="yj6-Ev-hp8" id="0Jv-WF-ftr"/>
                         <outlet property="valueOutputted" destination="BAI-sX-FIE" id="lKP-ox-KfU"/>
                         <outletCollection property="disabledButtons" destination="Mzl-sI-25r" collectionClass="NSMutableArray" id="zpx-CY-zkM"/>
                         <outletCollection property="disabledButtons" destination="5u6-r8-RTb" collectionClass="NSMutableArray" id="dOo-TB-ga5"/>
@@ -287,6 +295,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="11.594202898550726" y="20.758928571428569"/>
         </scene>
     </scenes>
 </document>
